@@ -1,71 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Project1</title>
+    <title>Freelancer - Theme Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .title {
-            text-align: center;
-            align-content: center;
-            font-size: 72px;
-            font-weight: bolder;
+        * {
+            box-sizing: border-box;
+            margin: 0;
             font-family: monospace;
-            border: solid;
-            background-color: black;
-            border-color: saddlebrown;
-            color: forestgreen;
         }
 
-        .subheading {
-            text-align: center;
-            align-content: center;
-            font-family: monospace;
-            font-weight: bold;
-            font-size: 18px;
-            color: black;
+        /*Navigation*/
+        .navbar {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: #2C3E50;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            vertical-align: middle;
         }
 
-        .aboutTitle {
-            text-align: center;
-            align-content: center;
-            font-size: 36px;
-            font-weight: bolder;
+        .navbar-title {
+            color: white;
+            text-decoration: none;
             font-family: monospace;
-            border: solid;
-            border-color: darkgreen;
-            background-color: darkolivegreen;
-            color: #21130d;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            vertical-align: middle;
+            display: inline;
         }
 
-        .aboutContent {
-            text-align: left;
-            align-content: center;
-            font-size: 18px;
+        .NItem {
+            list-style: none;
+            display: inline;
+        }
+
+        .NItem-content {
+            color: white;
+            text-decoration: none;
             font-weight: bolder;
+            text-transform: uppercase;
             font-family: monospace;
-            border: solid #21130d;
-            background-color: saddlebrown;
-            width: 400px;
+            font-size: 15px;
+            margin-right: 20px;
+        }
+        
+        /*Masthead*/
+        .masthead {
+            background-color: rgb(26, 188, 156);
+        }
+
+        .masthead-img {
             margin: auto;
-            margin-top: 15px;
-            padding-left: 50px;
-            color: forestgreen;
+            align-content: center;
+            text-align: center;
+            background-color: rgb(26, 188, 156);
+            width: 100%;
         }
 
+        .masthead-image {
+            width: 14rem;
+            height: 14rem;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .masthead-title {
+            margin: auto;
+            color: white;
+            font-weight: bolder;
+            font-family: monospace;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .masthead-separator {
+            text-align: center;
+        }
+
+        .masthead hr {
+            display: inline-block;
+            width: 100px;
+            height: 5px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .masthead i {
+            font-size: 30px;
+            margin: 0 15px;
+            color: white;
+        }
+
+        .seperator.red {
+            color: red;
+        }
+
+        .seperator.red hr {
+            background-color: red;
+        }
+
+        .masthead-subtitle {
+            color: white;
+            font-family: monospace;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 50px;
+        }
+
+        .masthead-separator {
+            text-align: center;
+        }
+        
+        /*Portfolio*/
+        .portfolio {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            align-content: center;
+        }
+
+        .portfolio-title {
+            margin: auto;
+            color: rgb(44, 62, 80);
+            font-weight: bolder;
+            font-family: monospace;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .portfolio hr {
+            display: inline-block;
+            width: 70px;
+            height: 2px;
+            background-color: rgb(44, 62, 80);
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .portfolio i {
+            font-size: 20px;
+            margin: 0 10px;
+            color: rgb(44, 62, 80);
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        .seperator.red {
+            color: red;
+        }
+
+        .seperator.red hr {
+            background-color: red;
+        }
+        
+        .portfolio-options {
+            width: 815px;
+            text-align: center;
+            align-content: center;
+            margin: auto;
+        }
+        
+        .pItem {
+            height: 250px;
+            width: 0px;
+            padding-bottom: 20px;
+            margin: auto;
+            padding-right: 20px;
+        }
+        
+        @media screen and (min-width:700px) {
+            .pItem {
+                display: inline-block;
+                width: 58%;
+            }
+        }
+        
+        @media screen and (min-width:900px) {
+            .pItem {
+                display: inline-block;
+                width: 42%;
+            }
+        }
+        
+        img {
+            height: 250px;
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        @media print {
+            img {
+                display: none;
+            }
+        }
+        
+        /*About*/
+        .about {
+            text-align: center;
+            background-color: rgb(26, 188, 156);
+            padding-bottom: 25px;
+        }
+
+        .about-title {
+            margin: auto;
+            color: white;
+            font-weight: bolder;
+            font-family: monospace;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-top: 50px;
+            text-transform: uppercase;
+        }
+
+        .about hr {
+            display: inline-block;
+            width: 70px;
+            height: 2px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .about i {
+            font-size: 20px;
+            margin: 0 10px;
+            color: white;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        .seperator.red {
+            color: red;
+        }
+
+        .seperator.red hr {
+            background-color: red;
+        }
+        
+        .about-content {
+            height: 100%;
+        }
+        
+        .about-content-left {
+            text-align: left;
+            color: white;
+            float: left;
+            width: 200px;
+        }
+
+        .about-content-right {
+            text-align: right;
+            color: white;
+            float: right;
+            width: 200px;
+        }
+        
+        .about-container {
+            vertical-align: middle;
+            margin: 0;
+            height: 100px;
+            width: 100%;
+            margin-top: 150px;
+        }
+        
+        .about-container button {
+            vertical-align: middle;
+            background-color: rgb(26, 188, 156);
+            border: solid white;
+            border-radius: 10px;
+        }
+        
+        .about-container a {
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            padding-top: 10px;
+        }
+        
+        /*Contact*/
+         .contact {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            align-content: center;
+        }
+
+        .contact-title {
+            margin: auto;
+            color: rgb(44, 62, 80);
+            font-weight: bolder;
+            font-family: monospace;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .contact hr {
+            display: inline-block;
+            width: 70px;
+            height: 2px;
+            background-color: rgb(44, 62, 80);
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .contact i {
+            font-size: 20px;
+            margin: 0 10px;
+            color: rgb(44, 62, 80);
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        .seperator.red {
+            color: red;
+        }
+
+        .seperator.red hr {
+            background-color: red;
+        }
+        
+        .name,
+        .email,
+        .phone,
+        .message {
+            display: block;
+            align-content: center;
+            text-align: left;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: sans-serif;
+            font-size: 15px;
+            border: none;
+            padding-left: 30px;
+        }
+        
+        #name,
+        #email,
+        #phone {
+            align-content: center;
+            border: none;
+            font-family: sans-serif;
+            font-size: 15px;
+            border: none;
+            border-bottom: solid 1px #ced4da;
+        }
+
+        #message {
+            align-content: center;
+            height: 160px;
+            font-family: sans-serif;
+            font-size: 15px;
+            resize: both;
+            min-width: 50px;
+            min-height: 160px;
+            border: none;
+            border-bottom: solid 1px #ced4da;
+        }
+
+        .submitButton {
+            align-content: center;
+            text-align: left;
+            margin: auto;
+            padding-left: 30px;
+            height: 50px;
+            font-family: sans-serif;
+        }
+
+        .Button {
+            height: 50px;
+            width: 70px;
+            border-radius: 10px;
+            background-color: #1abc9c;
+            border-color: #1abc9c;
+            color: white;
+        }
+
+        .form-control {
+            height: 50px;
+            width: 450px;
+            margin: auto;
+        }
+        
+        #contactForm {
+            align-content: center;
+            text-align: center;
+            width: 500px;
+            margin: auto;
+        }
+        
     </style>
 </head>
 
 <body>
-    <div class="title">PROJECT 2</div>
-    <div class="subheading">MATTHEW AIDAN BELOIU</div>
-    <br>
+    <!--    Navigation-->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-title" href="#page-top">Start Bootstrap</a>
+            <div class="navbar-options">
+                <ul class="navbar-list">
+                    <li class="NItem">
+                        <a class="NItem-content" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="NItem">
+                        <a class="NItem-content" href="#about">About</a>
+                    </li>
+                    <li class="NItem">
+                        <a class="NItem-content" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--    Masthead-->
+    <div class="masthead">
+        <div class="masthead-img">
+            <img class="masthead-image" src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">
+        </div>
+        <div class="masthead-title">Start Bootstrap</div>
+        <div class='masthead-separator'>
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <div class="masthead-subtitle">Graphic Artist - Web Designer - Illustrator</div>
+    </div>
+
+    <!--    Portfolio-->
+    <div class="portfolio">
+        <div class="portfolio-title">Portfolio</div>
+        <div class='portfolio-separator'>
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <div class="portfolio-options">
+            <div class="pItem">
+                <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cabin.png
+                " alt="">
+            </div>
+            <div class="pItem">
+                <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cake.png" alt="">
+            </div>
+            <div class="pItem">
+                <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png" alt="">
+            </div>
+            <div class="pItem">
+                <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/game.png" alt="">
+            </div>
+            <div class="pItem">
+                <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/safe.png" alt="">
+            </div>
+            <div class="pItem">
+                <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/submarine.png" alt="">
+            </div>
+        </div>
+    </div>
 
     <!--    About-->
-    <div class="aboutTitle">ABOUT</div>
-    <div class="aboutContent">About Content</div>
-    <br>
-
+    <div class="about">
+        <div class="about-title">About</div>
+        <div class='about-separator'>
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <div class="about-content">
+            <div class="about-content-left">
+                <p class="about-content-text-left">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+            </div>
+            <div class="about-content-right">
+                <p class="about-content-text-right">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+            </div>
+        </div>
+        <div class="about-container">
+            <button>
+                <i class="fa-solid fa-download"></i>
+                <a href="#">Free Download!</a>
+            </button>
+        </div>
+    </div>
+    
+    <!--    Contact-->
+    <div class="contact">
+        <div class="contact-title">Contact Me</div>
+        <div class='contact-separator'>
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        
+        <div class="row justify-content-center">
+        <div class="col-lg-8 col-x1-7">
+            <form id="contactForm">
+                <!--                   Name Input-->
+                <div class="name">
+                    <input class="form-control" id="name" type="text" placeholder="Full name" data-sb-validations="required" data-sc-can-submit="no">
+                </div>
+                <!--                    Email-->
+                <div class="email">
+                    <input class="form-control" id="email" type="email" placeholder="Email address" data-sb-validations="required,email" data-sb-can-submit="no">
+                </div>
+                <!--                    Phone Number-->
+                <div class="phone">
+                    <input class="form-control" id="phone" type="tel" placeholder="Phone number" data-sb-validations="required" data-sb-can-submit="no">
+                </div>
+                <!--                    Feedback Message-->
+                <div class="message">
+                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="width: 50" data-sb-validations="required" data-sb-can-submit="no"></textarea>
+                </div>
+                <!--                    Submit Button-->
+                <div class="submitButton">
+                    <button class="Button" id="submitButton" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
-
 </html>

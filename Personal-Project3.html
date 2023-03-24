@@ -3,67 +3,580 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Project1</title>
+    <title>Sytlish Portfolio - Theme Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        * {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Background*/
+        .background {
+            min-height: 30rem;
+            position: relative;
+            height: auto;
+            width: 100%;
+            padding-top: 19rem;
+            padding-bottom: 8rem;
+            background: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-content: center;
+        }
+
         .title {
+            font-size: 2rem;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 0.25rem;
             text-align: center;
-            align-content: center;
-            font-size: 72px;
+            font-family: monospace;
             font-weight: bolder;
-            font-family: monospace;
-            border: solid;
-            background-color: white;
-            color: black;
         }
 
-        .subheading {
+        .subtitle-text {
+            box-sizing: border-box;
+            font-style: italic;
+            font-size: calc(1.3rem + 0.6vw);
             text-align: center;
-            align-content: center;
-            font-family: monospace;
-            font-weight: bold;
-            font-size: 18px;
-            color: black;
         }
 
-        .aboutTitle {
+        .about {
+            margin: 0;
+            padding: 0;
+            position: relative;
             text-align: center;
-            align-content: center;
-            font-size: 36px;
-            font-weight: bolder;
-            font-family: monospace;
-            border: solid;
-            background-color: white;
-            color: black;
         }
 
-        .aboutContent {
+        .about-btn {
+            padding: 1.25rem 2.5rem;
+            color: white;
+            box-sizing: border-box;
+            background-color: #1D809F;
+            border-color: #1D809F;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            color: white;
+            background: rgba(52, 58, 64, 0.5);
+            line-height: 50px;
+            z-index: 999;
+            border-radius: 0.25rem;
+            text-decoration: underline;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .sidebar-content {
+            display: none;
+            background-color: #1D809F;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            z-index: 2;
+            right: 0;
+            width: 250px;
+            height: 100%;
+            background: 1D809F;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
             text-align: left;
-            align-content: center;
-            font-size: 18px;
-            font-weight: bolder;
+            font-size: 20px;
             font-family: monospace;
-            border: solid;
-            background-color: white;
-            width: 400px;
+            font-weight: bolder;
+        }
+
+        .sidebar-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /*Content*/
+        .content {
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            width: 100%;
             margin: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+
+        .content-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .content-about {
+            color: dimgrey;
+            display: block;
+            padding-bottom: 50px;
+        }
+
+        .unsplash-link {
+            text-decoration: underline;
+            color: dimgrey;
+        }
+
+        .offer-btn {
+            color: white;
+            background-color: #212529;
+            border-color: #212529;
+            padding: 1.25rem 2.5rem;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /*Service*/
+        .service {
+            text-align: center;
+            align-content: center;
+            background-color: rgb(29 128 159);
+            height: 100%;
+            width: 100%;
+            padding-top: 70px;
+            padding-bottom: 25px;
+        }
+
+        .service-subtitle {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            color: rgb(236, 184, 7)
+        }
+
+        .service-title {
+            font-weight: bolder;
+            color: white;
+            margin-top: 0;
+            font-size: 3rem;
+        }
+
+        .service-contents {
+            text-align: center;
+            align-content: center;
+            color: white;
+        }
+
+        .SItem {
+            display: inline-block;
+            text-align: center;
+            list-style: none;
+            margin-left: 25px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .SItem i {
+          padding: 32px;
+          display: inline-block;
+          border-radius: 50%;
+          font-size: 40px;
+          background-color: white;
+            color: #1D809F;
+        }
+
+        /*Callout*/
+        .callout {
+            min-height: 30rem;
+            position: relative;
+            height: auto;
+            width: 100%;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            background: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-callout.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-content: center;
+            vertical-align: middle;
+        }
+
+        .callout-title {
+            font-size: 4rem;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 0.25rem;
+            text-align: center;
+            font-family: monospace;
+            font-weight: bolder;
+            margin-top: 100px;
+        }
+
+        .callout-btn-container {
+            align-content: center;
+            margin: auto;
+            text-align: center;
+        }
+
+        .callout-btn {
+            padding: 1.25rem 2.5rem;
+            color: white;
+            box-sizing: border-box;
+            background-color: #1D809F;
+            border-color: #1D809F;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-top: 25px;
+        }
+
+        /*Portfolio*/
+        .portfolio {
+            text-align: center;
+        }
+
+        .portfolio-subtitle {
+            padding-top: 50px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: rgb(236, 184, 7);
+            margin-bottom: 0;
+        }
+
+        .portfolio-title {
+            font-size: 3rem;
+            margin-top: 0;
+            font-weight: bolder;
+        }
+
+        .portfolio-caption {
+            padding-left: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            font-size: 15px;
+            padding-top: 380px;
+        }
+
+        .PItem1 {
+            text-decoration: none;
+            display: inline-block;
+            height: 500px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+            background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-1.jpg)
+        }
+
+        .PItem2 {
+            text-decoration: none;
+            display: inline-block;
+            height: 500px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+            background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-2.jpg)
+        }
+
+        .PItem3 {
+            text-decoration: none;
+            display: inline-block;
+            height: 500px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+            background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-3.jpg)
+        }
+
+        .PItem4 {
+            text-decoration: none;
+            display: inline-block;
+            height: 500px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+            background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-4.jpg)
+        }
+
+        .portfolio-caption-subtitle {
             margin-top: 15px;
-            padding-left: 50px;
+        }
+
+        .portfolio-items {
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        /*Call to Action*/
+        .cta {
+            text-align: center;
+            padding-top: 50px;
+            background-color: #1D809F;
+            height: 150px;
+            width: 100%;
+            align-content: center;
+            vertical-align: center;
+        }
+
+        .cta-content {
+            margin-bottom: 50px;
+        }
+
+        .cta-title {
+            color: white;
+            font-weight: bolder;
+            padding-bottom: 35px;
+        }
+
+        .cta-btn-li {
+            background-color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bolder;
             color: black;
+        }
+
+        .cta-btn-dr {
+            background-color: darkslategrey;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        /*Map*/
+        .map {
+            height: 30rem;
+            display: block;
+            box-sizing: border-box;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            margin: 0;
+            padding-bottom: 50px;
+            overflow: hidden;
+        }
+
+        /*Footer*/
+        .footer-container {
+            margin: auto;
+            text-align: center;
+            margin-top: 0;
+            align-content: center;
+        }
+
+        .FItem {
+            display: inline-block;
+            text-decoration: none;
+            height: 4rem;
+            width: 4rem;
+            background-color: #1D809F;
+            border-radius: 50%;
+        }
+        
+        .FItem i {
+            padding: 15px;
+          display: inline-block;
+          border-radius: 50%;
+          font-size: 20px;
+            color: white;
+        }
+
+        .Copyright_Text {
+            margin-top: 35px;
+            color: darkgray;
+            font-size: 0.875rem;
+            margin-bottom: 50px;
+        }
+
+        .menu-toggle:hover .sidebar-content {
+            display: block;
         }
 
     </style>
 </head>
 
 <body>
-    <div class="title">PROJECT 3</div>
-    <div class="subheading">MATTHEW AIDAN BELOIU</div>
-    <br>
+    <!--    Background-->
+    <div class="background">
+        <div class="menu-toggle" href="">
+            <button class="sidebar-wrapper"></button>
+            <div class="sidebar-content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="title">
+            <h1 class="title-text">Stylish Portfolio</h1>
+            <h3 class="subtitle-text">A Free Bootstrap Theme by Start Bootstrap</h3>
+        </div>
+        <div class="about">
+            <a class="about-btn" href="#about">Find Out More</a>
+        </div>
+    </div>
 
-    <!--    About-->
-    <div class="aboutTitle">ABOUT</div>
-    <div class="aboutContent">About Content</div>
-    <br>
+    <!--    Content-->
+    <div class="content">
+        <div class="content-title">Sytlish Portfolio is the perfect theme for your next project!</div>
+        <p class="content-about">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
+            <a class="unsplash-link" href="https://unsplash.com/">Unsplash</a>!
+        </p>
+        <a class="offer-btn" href="#services">What We Offer</a>
+    </div>
 
+    <!--    Services-->
+    <div class="service">
+        <h3 class="service-subtitle">Services</h3>
+        <h2 class="service-title">What We Offer</h2>
+        <div class="service-contents">
+            <ul class="service-items">
+                <li class="SItem">
+                    <i class="icon-screen-smartphone"></i>
+                    <h4>Responsive</h4>
+                    <p>Looks great on any screen size!</p>
+
+                </li>
+                <li class="SItem">
+                    <i class="icon-pencil"></i>
+                    <h4>Redesigned</h4>
+                    <p>Freshly redesigned for Bootstrap 5.</p>
+                </li>
+                <li class="SItem">
+                    <i class="icon-like"></i>
+                    <h4>Favorited</h4>
+                    <p>Millions of users love Start Bootstrap!</p>
+                </li>
+                <li class="SItem">
+                    <i class="icon-mustache"></i>
+                    <h4>Question</h4>
+                    <p>I mustache you a question...</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--    Callout-->
+    <div class="callout">
+        <div class="callout-title">Welcome to your next website!</div>
+        <div class="callout-btn-container">
+            <a class="callout-btn" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
+        </div>
+    </div>
+
+    <!--    Portfolio-->
+    <div class="portfolio">
+        <h3 class="portfolio-subtitle">Portfolio</h3>
+        <h2 class="portfolio-title">Recent Projects</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <a class="PItem1" href="#!">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-subtitle">Stationary</div>
+                        <p class="portfolio-content">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a class="PItem2" href="#!">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-subtitle">Ice Cream</div>
+                        <p class="portfolio-content">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a class="PItem3" href="#!">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-subtitle">Strawberries</div>
+                        <p class="portfolio-content">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a class="PItem4" href="#!">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-subtitle">Workspace</div>
+                        <p class="portfolio-content">A yellow workspace with some scissors, pencils, and other objects.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--   Call to Action-->
+    <div class="cta">
+        <div class="cta-content">
+            <h2 class="cta-title">The buttons below are impossible to resist...</h2>
+            <a class="cta-btn-li" href="#!">Click Me!</a>
+            <a class="cta-btn-dr" href="#!">Look at Me!</a>
+        </div>
+    </div>
+
+    <!--    Map-->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12614.302964434497!2d-122.41696700000001!3d37.776545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1677166423451!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!--    Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="footer-items">
+                <li class="FItem">
+                    <i class="icon-social-facebook"></i>
+                </li>
+                <li class="FItem">
+                    <i class="icon-social-twitter"></i>
+                </li>
+                <li class="FItem">
+                    <i class="icon-social-github"></i>
+                </li>
+            </ul>
+            <p class="Copyright_Text">Copyright @ Your Website 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>
