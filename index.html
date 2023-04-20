@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <style>
         /* Background */
         * {
@@ -58,6 +59,7 @@
             background: linear-gradient(to right, black, #4e2e7f);
             text-align: center;
             padding: 180px 0;
+            display: block;
         }
 
         .aboutTitle {
@@ -79,20 +81,46 @@
             padding-bottom: 10px;
             font-family: 'Caveat', cursive;
         }
+        
+        .aboutMeContainer {
+            margin: auto;
+        }
 
-        .aboutMe {
+        .aboutMeTitle {
+            font-weight: bolder;
+            margin-top: 25px;
+            font-family: 'Play', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        
+        .aboutMeContainer h4 {
+            color: black;
+            font-size: 17px;
+            text-decoration: underline;
+        }
+
+        .aboutMeContent {
             text-align: left;
             align-content: center;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bolder;
-            font-family: monospace;
-            border: solid #b1fada;
-            width: auto;
+            font-family: 'Play', sans-serif;
+            width: 500px;;
             margin: auto;
             margin-top: 15px;
             padding: 10px;
-            color: #7db39b;
+            color: black;
             margin-bottom: 15px;
+        }
+
+        .aboutMeContainer b {
+            font-size: 15px;
+        }
+
+        .inf {
+            font-size: 12px;
         }
 
         /*        Projects*/
@@ -283,8 +311,33 @@
         </nav>
     </div>
     <div class="aboutMeContainer">
-        <div class="aboutMe">
-            I am in my third year of high school and I am looking to pursue a career in computer science, specifically in game design. I have worked on multiple personal projects with varying genres and gameplay styles from survival games, to battle royales. My passion is learning how to use these skills to create games that can help give people a little escape from reality for a bit, just having fun without worry!
+        <div class="aboutMeTitle">About Me</div>
+        <div class="aboutMeContent">
+            Hello There!
+            <br>
+            <br>
+            My name is Matthew Beloiu, I am in my third year of high school at
+            <a href="https://mts.ldcsb.ca">Mother Teresa Catholic Secondary School</a>
+            and I am looking to pursue a career in computer science, specifically in game design.
+            <br>
+            <br>
+            <h4>Personal Details:</h4>
+            <ul class="information">
+                <b>Name:</b>
+                <div class="inf">Matthew Aidan Beloiu</div>
+                <br>
+                <b>Age:</b>
+                <div class="inf">16</div>
+                <br>
+                <b>Ethnic Background:</b>
+                <div class="inf">Romanian</div>
+                <br>
+            </ul>
+            <h4>Education:</h4>
+            <ul class="information">
+                <b>Mother Teresa Catholic Secondary School (Sept 2020-Present):</b>
+                <div class="inf">I am a third-year student at Mother Teresa Catholic Secondary School (MTS)</div>
+            </ul>
         </div>
     </div>
 
