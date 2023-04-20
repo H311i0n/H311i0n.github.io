@@ -4,16 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-/*        Title*/
+        /* Background */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 90vh;
+            background-size: contain;
+            background-attachment: fixed;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-color: linear-gradient #f528ca;
+        }
+
+        section:first-child {
+            background-image: url(https://sitegroover.com/wp-content/uploads/2020/05/web-design-and-web-development-background.jpg);
+        }
+
+        /*        Title*/
         .title {
+            margin-top: 225px;
             text-align: center;
             align-content: center;
             font-size: 72px;
             font-weight: bolder;
             font-family: monospace;
             border: solid;
-            background-color: #b1fada;
             color: white;
         }
 
@@ -23,10 +43,10 @@
             font-family: monospace;
             font-weight: bold;
             font-size: 18px;
-            color: #7db39b;
+            color: white;
         }
 
-/*        About*/
+        /*        About*/
         .aboutTitle {
             text-align: center;
             align-content: center;
@@ -51,6 +71,7 @@
             margin-top: 15px;
             padding: 10px;
             color: #7db39b;
+            margin-bottom: 15px;
         }
 
         .profileImage {
@@ -65,44 +86,61 @@
             border-color: #7db39b;
         }
 
-/*        Projects*/
+        /*        Projects*/
         .Projects {
+            margin: auto;
+            padding: auto;
+            background-color: #b1fada;
+        }
+
+        .projectsTitle {
             text-align: center;
             align-content: center;
             font-size: 36px;
             font-weight: bolder;
             font-family: monospace;
             border-color: white;
-            background-color: #b1fada;
-            color: #7db39b;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            align-content: center;
-            text-align: center;
-            height: auto;
-            width: auto;
-            padding-top: 20px;
+            background-color: white;
+            color: #b1fada;
             margin: auto;
         }
 
-        .projectimage {
-            display: inline-block;
-            height: 125px;
-            width: 175px;
-            align-content: center;
+        .projectsContents {
             text-align: center;
-            border: solid;
-            padding: auto;
-            margin-left: 15px;
-            border-radius: 25px;
-            border-width: 10px;
-            border-color: #7db39b;
+            align-content: center;
+            color: black;
+            text-decoration: none;
         }
 
-/*        Contact Me*/
+        .PItem {
+            display: inline-block;
+            text-align: center;
+            list-style: none;
+            margin-left: 25px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        .PItem i {
+            padding: 32px;
+            display: inline-block;
+            border-radius: 50%;
+            font-size: 2rem;
+            background-color: white;
+            color: #b1fada;
+        }
+
+        .PItem a,
+        h4 {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bolder;
+            font-family: monospace;
+        }
+
+        /*        Contact Me*/
         .contactmeTitle {
             text-align: center;
             align-content: center;
@@ -204,16 +242,25 @@
             color: #b1fada;
         }
 
+        /*    Footer*/
+        .Copyright_Text {
+            margin-top: 35px;
+            color: #7db39b;
+            font-size: 0.875rem;
+            padding-bottom: 25px;
+            padding-top: 50px;
+            text-align: center;
+        }
+
     </style>
 </head>
 
 <body>
-    <!--   Title-->
-    <div class="title">MY PORTFOLIO</div>
-    <div class="subheading">MATTHEW AIDAN BELOIU</div>
-    <br>
-    <br>
-    <br>
+    <!-- Background Title-->
+    <section>
+        <div class="title">MY PORTFOLIO</div>
+        <div class="subheading">MATTHEW AIDAN BELOIU</div>
+    </section>
 
     <!--    About-->
     <div class="aboutTitle">ABOUT</div>
@@ -223,59 +270,76 @@
     </div>
     <br>
     <div class="aboutContent">I am in my third year of high school and I am looking to pursue a career in computer science, specifically in game design. I have worked on multiple personal projects with varying genres and gameplay styles from survival games, to battle royales. My passion is learning how to use these skills to create games that can help give people a little escape from reality for a bit, just having fun without worry!</div>
-    <br>
 
     <!--    Projects-->
-    <div class="Projects">PROJECTS</div>
-    <div class="container">
-        <a href="Personal-Project1.html" target="_blank">
-            <img src="SUPERSPACE_Title.png" alt="Image Not Available" class="projectimage">
-        </a>
-        <br>
-        <a href="Personal-Project2.html" target="_blank">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABNVBMVEXdPTH///8gku3/wQcop0XlNhnbJxVHhdLlNDD64+EjqEXbMDNFhtL/wgAepkZMl0L6rQ8AiuzcOCv/+u0Aj/X4wAncMCHcNSfbJREAoTL/wxPbLBz/vQD87u09qUHbKxomle7fS0EAiOwAj++01fjE48r+9/fvsKz20tD//faMwPTb7t/j8PwAnysPojfngXu23b1aqPCeyfah06rzxcPeQzfZ6vvjZ1/kb2jy+P47nO/qko31zsvwt7T/7sr/1G3/zlJeuHCPy5r//ujL4vo3rFF1tfLZ7d1KsmDhV03snprrl5K+sHHVtlj/yj/me3VywIH/1GxLls+RpqHMtGRfnMalq5F5obe1rn/kujzEs22trImDo69mrfFTmtDqvjTbqD19kaXauE/nuzeaqpx+orODxpBzQVXQAAAPQElEQVR4nO3de1vTSBcA8DaUYotZbQhpSq1tjUuXW+ulUBaoLihK0RVf8H7X3dfv/xHepLfM5UwmM5Mm8j45//II/XnSyWTmZE4mG2c8+M/K3MrDB7H+zUyMf2vtrxtzXtz4ay3GvxqjcEmfm4S+FN+fjU+IAGMlxiZcmsMjNmJcQhIYHzEmIQ2cW4mJGI8QAMaWxWiEdw6PcydHG6wfw8AA4s76XmPv8+1IPlsUwo1cpZjLFdtbJ3fAn2OjKBqMEfX2XsnRNM0pNXYi+HQRCJ9uub5hFNvFI/pmzgSCxM11zeONohQBMQJhcQL0or11+Dv+Y9YlCg43j+/e8n1eqH88deH9dg6LYuX4PpLIQCBO/PNeo6Th4dxT/nzqwhwVxXbl5dPxT5dWgoU+8fHnkqNR0VD+fMrC3ys00b1YK6NRh5NBnzgeXagoPU5ceFiEhKNRZ4ObQS/0RztPHJDnXaafkxZugCmcjDrLfJ6uPz+H0zdO4mbCwqM2E/jbzWX2fWLi+3rRMAN8bhLXExYGArnpe/U6mDckJiu8wxTygLq+/GaP73OFipM3ReEJY5zhAN30/XhrMocXPO4mKWSOM4FA1/fuPEz6RqE4dVMT/mRcpEFAXX9/oYX3uZfpk+SEa4wUsoFu+j58EeENickJySkpD+iOLv+GGl0IodJYoyQ8BscZBtBN399vxXle7CUlfApepDDQ9X0UGF3wUJqcqghfQikEge7o8smU9SlOThWE4DgDAL2pp/DoQiTxz0SER+0iHe5clAzu1DNEEhUehMMJawUgrkFxnYxv3xciiKvQB6hFJSx0LDsPxBUoFqmw5qMI6APYVqcQhbBllzO/apTtlrqwZSfNCAw+kScs/NpAl8i7UHnCs1/3Eh1FuaMotJIWcMNSE9Z+9YvUvUw5Nw2OsJBPGsCNPOeLmApTYfKRClNhKkw+UmEqTIXJRypMhakw+UiFqTAVJh9Kws31q/NJA7hx5Rq7OJkj9IoFFy6DsF0ha1rDCL1aT0fTLkUOi2RNawjhzpNxMd0lEeI1rXwhUut5aYQesgJW0lPCzXW0GOsyCYeJpEcdQvj4Ll7rebmEOa84mRx1MOE9jawkj1xojCLC34gLvYs1d58h3NHoeoLIhEbZquYtI9Mc9HqDQdMoV/N1qxyFlBR6iSxuQMIdMn/RCctVe9BpdQur/t9drRW6/f1e3VNHLnTzuAEIG1CZRwTCcj3T6TN3wAqt3XJdaRcWEuaKx7TwNpRCZaFh2WcHLN0knd0zWyGToDBXmd44psK7YKmOorC63VqFWQSy1czLGmFh8ZASghepmtCy+mF4o+jKGmFhbnqZzk5o5PfD+4bG7WqEwhwl3ItYaDVD1CsR0bIl0si4Sk8o4TpYXCcttHlFIGAUBuJphIXtI0oI3g6lhSGqseA4FS7+gIVb0xuifz8EL1NJod2VBGazfdF1E/h+OL1IEeFt6DKVEyoA3S9jPQJh23+OQualkeVQ+hIdRU9suIFz6P86RAiNNTJCS/AuQcYfYklcvH7zN/Y4gwk3b0UiNAZqwGxWLIeL15cp4hb4bAFO3CSE1XDFyQExECIuXtdJoj9lI4SP6RuGuNA6ZX7yQv/ZWW/QdGOwu9/6gzlj3RUVzhHECvqYjz3j0zM3caHB4u1n7Kr7zDuOslW3B6fwtEdsqPGEBPEY/W34KgY11ggLq/A4WugB1eKGld+FHq2a4kKM2GatYmSzf1KXqbCwDAKZE07DHlD3zproWDp82xghVrDFYXyt7QmZRFEhXJO8HzAVM+pNIo/PxOqSx0KfWHyJ/TpcSI01osL6H2AGA/+NYe+iw69o7fxEOCVW8LVvYr2UnJyKCvMAkF9JXbaRAVjsW4gIx8TiMf7nCSE5ORUUGj1A2Amx0GRlxiNUbSC6LOULR8Q2sbRPruqrCcvQhC1UToxqvdM/6O6LL2UgwiGxTfx5UkhMTgWFFnCvCP29cm+RVYl1RVToEts/OcLNkoqwCjw2CU6khQMTzi1vkVszpPDRucrOTB24gR/EKtSXyZ1SQrikPzdVhMDNYtbFDriQPpgJFy65/wmNiHO4OuMXi0ghScSE3olA+oUjL4S+h6HuFgqx+I08I2aFOWsbHnmkfzUVhNAi9+ps352yvlOn4GBZRITjM5301/K73PDD4YHMQm/omF/4ShORLPrCycFx+itTWlg+g4TZgtx6fbiYX7igjzJCspghgS5xz5EVZrZBYTZ7Wq3OKo/zCw3gsCY/ixMhcuyY/saUFtrMpYl+z54Ncv6q+RwiLuFC9Fw1fVleGLSfVuv3qtVItu4JofMFOnFrQsxQQJf41pEVgg8Xfqx2O007YuX8Vc18H0DM0MA5/YcpK8zUuXtqte5+s1pXLlBAhc4n+Ni0pYmQOvpPP5eu+mKMpqTy4Nkgqly6Qs3UQeIwixnofFH9nSkr5L8f71+x+031WpOx8CPj7LslT7hG/1DXpa9S3jcRj8JpU6UMYyp0zhlCfc0VvoB+MJmcyqzqPxMgesht6TKMqVAz/2YQX2QzD25Awn9MaWHGFqjAGMbBrsrhIkOh85YhvPEg8xDO7muFClphYra2n5c2DoWayTqF8mFmBfyJ/sGUF8pskdb2ZafnI6HzBhbqKxlY7k5OFYSZvEQlRqEnt9wxEmp7rJNEGTmc0/91FIQZaxta/OZEqy6TxrHQ/ABfjCuM7+FkcipdT2PYZ+I7pYWmxLdxLHRew6l6CI+lc5PJqULVV9kOc4oTET1x4liomf9ARHcsBe+HnvBvU03oGcHtwcAQXtSfCh3gQXh4P4TmNCPiufobJUbdYOzzMmNb9Ls4EWoaMDkdzmlY597rH80oaoStPGszG46C6Ig6FZrvaMgS49liJNQjEQ7rhDP73dDjTktwTWcqpCenk2cLJvGTE1mtfrlaHYRVCm4g+lep+YMgTp8PGUT9vRnl+xZGuWpvnwUUmUyiK3ad+kLnv5gQfcZnEb84Ub9RUrbylpvMYKXYYOML8ckpvk4DE/Xn5izeCjLK9XyvFXDFPhO6Y6BCZHJKrrXBI6remNUblu7o02M+gYjtViFCx5+c0uulIFG/mOE7pEY9w3oEERpNEaFmvtKJDEL7Fqjw62zfkq1uR1D2hQonk1N43wIkfp/t5p+RBx9BhPbjUKFmDndpWHtPQMsU/dvizHSjAM8EbIn8v2LC4eQU3yKl9oBx4fVZC8Eysb60UGvogXvAVBZnLwSPruyLDDW40HxO9pAiazGWlmMWQivIXXmhc/6I+GWkcAPrDRODEBprFK5Sui8NKfzZRo8clxAaVr0qsowN5VB+pAH60pDCNnaqurjQ2m4ddFtQRTDrH9DA7L703UKje0UQQq9vDEIUFubHpQqhl3jBvSrpO/5QSPSKIITDfg4+UVRY9Wsxaruhlnht6JYvO/MeBdErAheO+zlMiYJC/GWSgyZ//dOCbodiVcKUkOgVgQsn/RwmREEhOS72eUYL3IoTGmhoIdGXBhP6/RzGRDGh0aQ+bLcXsD9o2PCGsdg7M5SQ6BWBCZG+MSOimBCsEC6cNvMW9MUq5wfwyr9gMSMtxHtFYEL0zZohUUzIKjUptM4su26VkRdmqrbRYe1sCB4DTwvxpomoEG9l6BHFhGBl4jhqB63pS0+9zmmXvYQq+jYCIMTGGlRItDL0et+J5VDtzcpx7Aqu6wNCrJEZItzYIt7ic4li30Op97eJ6IrWakLCW8jkFBHSrQx/uyl4x1cHrkrvzGBjDTI5RT4U9DrttSsifwwsoBULsTsFS4h22fWFUCtDQWHGUn1/VGH/EB9r/MmpL4RaGYoKjW014pnEwhecQ39yOhWCLcZEhRmjLLwn6sdqT2ZlDxb6TROnQrBlqrDQfViQfle9sC1VUwML/bFmKgT7bUoI3WdguTTKVWKwhP5lOhUCPjmhO6HuiZeaFAayLw8xhNOZ21R4HJlwaBQ7GaPWkX9hIbQQ7D4tKfS2XbZPQw+rhY58VRtTOJ24TYVgZ19p4XD/rBmmRGG1L7BsFV7o3xD9+2Eugvshicwbu6dB29qFVk/5RQxY6D9A+cKNCnB2nZJwpKzbzd3TfqGGQ2uF/n7PUi4QZgmRHsLos0WOulDVhUOlYXmnJBremYm7Z7vuU2KmXM1Hc2oiKHQaSJNkfBWjSOQxGuEkRs/3ER99Cay1aexVDPcx/7DSnplwNkHszJTuEo1nqUe6jaNKu3hZhY6zTm7MgOcI3zmZXKyXSuiU9qDmz/Bj+dOXo0ReIqFTegL3YGctPKzdP3YTeWmEpcY9VsvggKUVb9S5DMIFenQJKfRGncsgvEqPLqGF//+9EVLhLxGpMBWmwuQjFabCVJh8pMJUmAqTj1SYClNh8pEKOUL+CbmJB/heUXih2ItyiUSdI+AJBYs94w9uuSBPKFrtGXtwz6XilhNyDuNOOvhH4fALJltqhQQzjXKIs35ClIQWOpadB2I+irAWqbgCBfQBbCvM6Snhil5rBSCuLkQQ379dJ+MaFNAHCFewo1DWC/fACh+O2fj3q07G8s0iHWjfGNFQENK9IsR8rz/o9HkrdM8YL/B+DrEJs5+lk+iYzqf30FmHMJDo5xCfEOhLE9J3/g5IHxNI9nOIT8jot8f1vf0BH1XJApL9HGIU0n1p+Ly9N8sMHwtI9I2JVZgVvEzd0eUVfHkGAXMVpc+oJqT60gTytIt/mLwAINXPIU4h3DQR9rFGFx4wV6FabccoZHSgpXnmf38E+gKASCvDJIRg00TKt/eRObpwgVTfmJiFZF8ayBc0uvCBVN+YuIXBk1N36nnBS593CmUQUGFKGolwM2CscUpfnnPT52VwC6qij2acUReyxxqv1vMRn+cdebTxs92G2xbjrQyTEcKT00mtJ3VqEQAcnidz5xgopM8RrQyTEULtrp3Sk0mxIJc4PRHIq2kFiMqfT11ITU7xWk8OET3yaO1+jkyk2pR0GBG8uoun7xZZ6xlIJFsX/X6IjTpF9RRGIUSmbo4G1HoGEElg1qtpLU5HnSLVgEsiIhBmdxoldHShAj481Asa6MWdky0XWSxWchEAIxG6k7e7jcbeOlxJnmVmEcjgODaOTnLHh4rTtXFEI+QFSGQDI414hBAxJmBcQuC7GBMwNiFJjCuDMQqJ81FjA8YoRInk2YazjBiF2bUXozP8b7xQWKQXjjiF2eyDhy/mXjx8EOvf/B+RePtEKX2jvgAAAABJRU5ErkJggg==" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png" class="projectimage">
-        </a>
-        <br>
-        <a href="Personal-Project3.html" target="_blank">
-            <img src="data:image/png;base64,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" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png" class="projectimage">
-        </a>
-        <br>
-        <a href="Personal-Project4.html" target="_blank">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfP6gqtwDKjdtGZJfcBbPgQ58f5fWilPvDnA&usqp=CAU" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png" class="projectimage">
-        </a>
-    </div>
-    <br>
-    <!--    Contact Me-->
-    <div class="contactmeTitle">CONTACT ME</div>
-    <br>
-
-    <!--    Contact Form-->
-    <div class="row justify-content-center">
-        <div class="col-lg-8 col-x1-7">
-            <form id="contactForm">
-                <!--                   Name Input-->
-                <div class="name">
-                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sc-can-submit="no">
-                </div>
-                <!--                    Email-->
-                <div class="email">
-                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
-                </div>
-                <!--                    Phone Number-->
-                <div class="phone">
-                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no">
-                </div>
-                <!--                    Feedback Message-->
-                <div class="message">
-                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="width: 291px" data-sb-validations="required" data-sb-can-submit="no"></textarea>
-                </div>
-                <!--                    Submit Button-->
-                <div class="submitButton">
-                    <button class="Button" id="submitButton" type="submit">Send</button>
-                </div>
-            </form>
+    <div class="Projects">
+        <div class="projectsTitle">PROJECTS</div>
+        <div class="projectContents">
+            <ul class="projectItems">
+                <li class="PItem">
+                    <i class="icon-game-controller"></i>
+                    <h4>
+                        <a href="Personal-Project1.html" target="_blank">SUPERSPACE Original Game</a>
+                    </h4>
+                </li>
+                <li class="PItem">
+                    <i class="icon-graduation"></i>
+                    <h4>
+                        <a href="Personal-Project2.html" target="_blank">Freelancer Portfolio Recreation</a>
+                    </h4>
+                </li>
+                <li class="PItem">
+                    <i class="icon-mustache"></i>
+                    <h4>
+                        <a href="Personal-Project3.html" target="_blank">Stylish Portfolio Recreation</a>
+                    </h4>
+                </li>
+                <li class="PItem">
+                    <i class="icon-list"></i>
+                    <h4>More Coming Soon!</h4>
+                </li>
+            </ul>
         </div>
     </div>
+
+    <!--    Contact Me-->
+    <!-- <div class="contactmeTitle">CONTACT ME</div>
+    <br> -->
+
+    <!--    Contact Form-->
+    <!-- <div class="row justify-content-center"> -->
+        <!-- <div class="col-lg-8 col-x1-7"> -->
+            <!-- <form id="contactForm"> -->
+                <!--                   Name Input-->
+                <!-- <div class="name">
+                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sc-can-submit="no">
+                </div> -->
+                <!--                    Email-->
+                <!-- <div class="email">
+                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
+                </div> -->
+                <!--                    Phone Number-->
+                <!-- <div class="phone">
+                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no">
+                </div> -->
+                <!--                    Feedback Message-->
+                <!-- <div class="message">
+                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="width: 291px" data-sb-validations="required" data-sb-can-submit="no"></textarea>
+                </div> -->
+                <!--                    Submit Button-->
+                <!-- <div class="submitButton">
+                    <button class="Button" id="submitButton" type="submit">Send</button>
+                </div> -->
+            <!-- </form> -->
+        <!-- </div> -->
+    <!-- </div> -->
+
+    <!--    Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="Copyright_Text">Copyright @ Your Website 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>
