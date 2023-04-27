@@ -55,7 +55,7 @@
         }
 
         /*        About*/
-        .aboutContainer {
+        #aboutContainer {
             font-family: 'Libre Baskerville', serif;
             background: linear-gradient(to right, black, #4e2e7f);
             text-align: center;
@@ -73,7 +73,7 @@
             font-weight: bolder;
         }
 
-        .aboutContainer nav a{
+        #aboutContainer nav a{
             text-decoration: none;
             color: white;
             font-size: 1rem;
@@ -121,7 +121,7 @@
             color: white;
         }
 
-        .aboutMeContainer b {
+        #aboutMeContainer b {
             font-size: 15px;
         }
 
@@ -132,6 +132,11 @@
         .code li {
             list-style: inside georgian;
         }
+        
+        @media screen and (min-width:576px) {
+            #about_container1 {
+                padding: 220px 0;
+            }
 
         /*        Projects*/
         .Projects {
@@ -313,7 +318,7 @@
     </section>
 
     <!--    About-->
-    <div class="aboutContainer">
+    <div id="aboutContainer">
         <div class="aboutTitle">ABOUT</div>
         <nav>
             <a href=".aboutMeTitle">About Me</a>
