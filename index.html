@@ -84,7 +84,7 @@
         
         .aboutMeContainer {
             margin: auto;
-            background: linear-gradient(to right, #4e2e7f, #f528ca);
+            background: linear-gradient(to right, black, #4e2e7f, #f528ca);
         }
 
         .aboutMeContainer h2 {
@@ -108,7 +108,7 @@
             text-decoration: none;
         }
 
-        .aboutMeContent, .extraContent {
+        .aboutMeContent {
             text-align: left;
             align-content: center;
             font-size: 15px;
@@ -133,10 +133,34 @@
             list-style: inside georgian;
         }
         
-        @media screen and (min-width:576px) {
-            #about_container1 {
-                padding: 220px 0;
+        @media screen and (min-width: 1200px) {
+            #aboutContainer {
+                position: sticky;
+                top: 88px;
+                width: 50%;
+                float: left;
+                padding: 16% 0;
+                padding-bottom: 37%;
+                z-index: 0;
             }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .aboutMe .aboutMeContainer {
+                margin: 0 0;
+                width: 89.39%;
+                float: right;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .aboutMeContent div, .aboutMeContent h2 {
+                position: relative;
+                left: 15%;
+                display: block;
+                width: 400px;
+            }
+        }
 
         /*        Projects*/
         .Projects {
@@ -334,7 +358,7 @@
             <br>
             My name is Matthew Beloiu, I am in my third year of high school at
             <a href="https://mts.ldcsb.ca">Mother Teresa Catholic Secondary School</a>
-            and I am looking to pursue a career in computer science, specifically in game design.
+            and I am looking to pursue a career in computer science, including game design and cybersecurity.
             <br>
             <br>
             <h4>Personal Details:</h4>
@@ -363,10 +387,6 @@
                 <li>Python</li>
                 <li>HTML/CSS</li>
             </ul>
-            <br>
-        </div>
-        <h2 class="extraTitle">Extracurriculars</h2>
-        <div class="extraContent">
             <h4>Personal Extracurriculars:</h4>
             <p>I have been a part of the Army Cadets program since I was 11 years old. My current rank is that of a Warrant Officer (WO). I have attended two Remebrance Day parades and have been part of the flag party at my school's Remembrance Assembly. I have taught numerous lessons within the cadet program, the majority being on navigation and other similar topics.</p>
             <br>
