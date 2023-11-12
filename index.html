@@ -1,532 +1,252 @@
-<!doctype html>
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <title>Personal Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link href="https://fonts.googleapis.com/css2?family=Allison&amp;family=Anton&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
-  <style>
-    /* Background */
-    * {
-      margin: 0;
-      box-sizing: border-box;
-      padding: 0;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
 
-    section {
-      height: 175vh;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      overflow: hidden;
-      background-repeat: no-repeat;
-      /* background: linear-gradient(#4e2e7f, #f528ca); */
-    }
+        .titleContainer {
+            margin: auto;
+            text-align: center;
+            height: 550px;
+            vertical-align: center;
+            background-image: url("https://www.newgenapps.com/hubfs/Imported_Blog_Media/Website-Design-Background-Feb-09-2022-03-13-55-73-AM.png");
+            height: 100vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            overflow: hidden;
+            background-repeat: no-repeat;
+        }
 
-    section:first-child {
-      background-image: url(https://sitegroover.com/wp-content/uploads/2020/05/web-design-and-web-development-background.jpg);
-    }
+        .title {
+            width: auto;
+            margin: auto;
+            margin-top: 225px;
+            font-size: 64px;
+            font-family: 'Caveat', cursive;
+            color: white;
+            -webkit-text-stroke: black;
+            -webkit-text-stroke-width: 1px;
+        }
 
-    /*        Title*/
-    .title {
-      margin-top: 551px;
-      text-align: center;
-      align-content: center;
-      font-size: 72px;
-      font-weight: bolder;
-      font-family: 'Rubik Pixels', cursive;
+        .titleContainer hr {
+            width: 650px;
+            margin: auto;
+            height: 4px;
+            color: white;
+            background: white;
+        }
 
-      color: white;
-    }
+        .subtitle {
+            font-family: 'Caveat', cursive;
+            color: white;
+            -webkit-text-stroke: black;
+            -webkit-text-stroke-width: 0.75px;
+            font-size: 24px;
+        }
+        
+        .infoContainer {
+            background: linear-gradient(to left, slategrey, white, slategrey);
+            font-family: 'Exo 2', sans-serif;
+        }
 
-    .subheading {
-      text-align: center;
-      align-content: center;
-      font-family: 'Caveat', cursive;
-      font-weight: bold;
-      font-size: 18px;
-      color: white;
-    }
+        .aboutMeContainer {
+            width: 600px;
+            height: 750px;
+            padding-left: 15px;
+            float: left;
+            background: linear-gradient(to left, white, slategrey);
+            border-right: solid slategrey;
+            border-bottom: solid slategrey;
+            margin-bottom: 35px;
+        }
 
-    /*        About*/
-    #aboutContainer {
-      font-family: 'Allison', serif;
-      background: linear-gradient(to right, black, #4e2e7f);
-      text-align: center;
-      padding: 180px 0;
-      display: block;
-    }
+        .aboutMeTitle {
+            width: 250px;
+            text-align: center;
+            margin: auto;
+            vertical-align: center;
+            color: black;
+            text-decoration: underline;
+            font-size: 36px;
+            padding: 25px;
+        }
+        
+        .summary {
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
 
-    .aboutTitle {
-      font-family: 'Allison', cursive;
-      font-size: 6rem;
-      background: linear-gradient(to right, #4e2e7f, #f528ca);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: bolder;
-    }
+        .summaryLink {
+            text-decoration: none;
+            font-style: italic;
+            color: black;
+        }
 
-    #aboutContainer nav a {
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-      transition: 0.2s;
-      padding-bottom: 10px;
-      font-family: 'Caveat', cursive;
-    }
+        .aboutMeContainer h4 {
+            font-size: 24;
+            text-decoration: underline;
+        }
 
-    .aboutMeContainer {
-      margin: auto;
-      background: linear-gradient(to right, black, #4e2e7f, #f528ca);
-    }
+        .aboutMeContainer b {
+            font-style: italic;
+            text-decoration: underline;
+        }
 
-    .aboutMeContainer h2 {
-      font-weight: bolder;
-      font-family: 'Play', sans-serif;
-      font-size: 20px;
-      padding-top: 25px;
-      text-align: center;
-      text-decoration: underline;
-      color: white;
-    }
+        .information {
+            margin-left: 15px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
 
-    .aboutMeContainer h4 {
-      color: white;
-      font-size: 17px;
-      text-decoration: underline;
-    }
+        .inf {
+            margin-left: 15px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
 
-    .aboutMeContent a {
-      color: white;
-      text-decoration: none;
-    }
+        .projectContainer {
+            width: 594px;
+            height: 750px;
+            padding-right: 15px;
+            float: right;
+            background: linear-gradient(to left, slategrey, white);
+            border-left: solid slategrey; 
+            border-bottom: solid slategrey;
+            margin-bottom: 35px;
+        }
 
-    .aboutMeContent {
-      text-align: left;
-      align-content: center;
-      font-size: 15px;
-      font-weight: bolder;
-      font-family: 'Play', sans-serif;
-      width: 1240px;
-      margin: auto;
-      margin-top: 15px;
-      padding: 10px;
-      color: white;
-      overflow-wrap: break-word;
-      inline-size: auto;
-    }
+        .projectTitle {
+            width: 250px;
+            text-align: center;
+            margin: auto;
+            vertical-align: center;
+            color: black;
+            text-decoration: underline;
+            font-size: 36px;
+            padding: 25px;
+        }
 
-    #aboutMeContainer b {
-      font-size: 15px;
-    }
+        .PItem {
+            display: inline-flexbox;
+            text-align: center;
+            list-style: none;
+            padding-top: 60px;
+            margin-left: -25px;
+            padding-left: 30px;
+            position: center;
+        }
 
-    .inf {
-      font-size: 12px;
-    }
+        .PItem i {
+            padding: 32px;
+            display: inline-block;
+            border-radius: 50%;
+            font-size: 2rem;
+            background-color: white;
+            color: black;
+            margin-bottom: 20px;
+        }
 
-    .code li {
-      list-style: inside georgian;
-      font-size: 12px;
-    }
+        .PItem a, pitemSubtitle {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bolder;
+            margin-top: 15px;
+        }
 
-    @media screen and (min-width: 1200px) {
-      #aboutContainer {
-        /*        position: sticky;*/
-        top: 88px;
-        width: 50%;
-        float: left;
-        padding: 16% 0;
-        /*        padding-bottom: 37%;*/
-        z-index: 0;
-        border: solid red;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      .aboutMe .aboutMeContainer {
-        margin: 0 0;
-        width: 100%;
-        float: right;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      .aboutMeContent div .aboutMeContent h2 .aboutMeContent {
-        position: relative;
-        left: 15%;
-        display: block;
-        width: 400px;
-      }
-    }
-
-    /*        Projects*/
-    .Projects {
-      margin: auto;
-      padding: auto;
-      background: linear-gradient(to right, #4e2e7f, #f528ca);
-      font-family: 'Play', sans-serif;
-    }
-
-    #projectContainer {
-      font-family: 'Allison', serif;
-      background: linear-gradient(to right, black, #4e2e7f);
-      text-align: center;
-      padding: 180px 0;
-      display: block;
-    }
-
-    .projectsTitle {
-      font-family: 'Allison', cursive;
-      font-size: 6rem;
-      background: linear-gradient(to right, #4e2e7f, #f528ca);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: bolder;
-    }
-
-    .projectsContents {
-      text-align: center;
-      align-content: center;
-      text-decoration: none;
-      background: linear-gradient(to right, black, #4e2e7f, #f528ca);
-    }
-
-    .projectItems {
-      background: linear-gradient(to right, black, #4e2e7f, #f528ca);
-    }
-
-    .PItem {
-      display: inline-flexbox;
-      text-align: center;
-      list-style: none;
-      padding-top: 45px;
-      margin-left: 25px;
-      padding-left: 30px;
-      position: center;
-    }
-
-    .PItem i {
-      padding: 32px;
-      display: inline-block;
-      border-radius: 50%;
-      font-size: 2rem;
-      background-color: white;
-      color: #4e2e7f;
-    }
-
-    .PItem a,
-    h4 {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      font-weight: bolder;
-      padding-bottom: 45px;
-      padding-top: 15px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      #projectContainer {
-        /*        position: sticky;*/
-        top: 88px;
-        width: 50%;
-        float: left;
-        padding: 16% 0;
-        padding-bottom: 37%;
-        z-index: 0;
-        border: solid red;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      .projectsContents .projectItems {
-        margin: 0 0;
-        width: 89.39%;
-        float: right;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      .aboutMeContent div .projectItems h2 {
-        position: relative;
-        left: 15%;
-        display: block;
-        width: 400px;
-      }
-    }
-
-    /*        Contact Me*/
-    .contactmeTitle {
-      text-align: center;
-      align-content: center;
-      font-size: 36px;
-      font-weight: bolder;
-      font-family: monospace;
-      border: solid;
-      border-color: white;
-      background-color: #b1fada;
-      color: #7db39b;
-    }
-
-    .contactmeContent {
-      text-align: left;
-      align-content: center;
-      font-size: 3rem;
-      font-weight: bolder;
-      font-family: monospace;
-      border: solid;
-      width: auto;
-      margin: auto;
-      margin-top: 15px;
-      padding-left: 50px;
-      color: #7db39b;
-    }
-
-    .name,
-    .email,
-    .phone,
-    .message {
-      align-content: center;
-      text-align: left;
-      margin: auto;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-family: sans-serif;
-      font-size: 3rem;
-      border: none;
-      padding-left: 30px;
-    }
-
-    #name,
-    #email,
-    #phone {
-      align-content: center;
-      border: none;
-      font-family: sans-serif;
-      font-size: 1.5rem;
-      border: none;
-      border-bottom: solid #7db39b;
-      border-right: solid #7db39b;
-      width: auto;
-    }
-
-    #message {
-      align-content: center;
-      height: 160px;
-      font-family: sans-serif;
-      font-size: 1.5rem;
-      resize: both;
-      min-width: 50px;
-      min-height: 160px;
-      border: none;
-      border-bottom: solid #7db39b;
-      border-right: solid #7db39b;
-      width: auto;
-    }
-
-    .submitButton {
-      align-content: center;
-      text-align: left;
-      margin: auto;
-      padding: 10px;
-      height: 50px;
-      font-family: sans-serif;
-    }
-
-    .Button {
-      height: 50px;
-      width: 70px;
-      border-radius: 10px;
-      background-color: #b1fada;
-      border-color: #b1fada;
-      color: #7db39b;
-      font-weight: bolder;
-    }
-
-    .form-control {
-      height: 50px;
-      width: 450px;
-    }
-
-    #contactForm {
-      align-content: center;
-      border: solid;
-      text-align: center;
-      width: 400px;
-      margin: auto;
-      color: #b1fada;
-    }
-
-    /*    Footer*/
-    .footer-container {
-      background: linear-gradient(to right, black, #4e2e7f, white);
-    }
-
-    .Copyright_Text {
-      padding-top: 95px;
-      color: black;
-      font-size: 0.875rem;
-      padding-bottom: 105px;
-      text-align: center;
-      background: linear-gradient(to right, black, #4e2e7f, white);
-      font-family: 'Play', cursive;
-    }
-  </style>
+        .Copyright_Text {
+            padding-top: 95px;
+            color: black;
+            font-size: 0.875rem;
+            padding-bottom: 35px;
+            text-align: center;
+            background: linear-gradient(to right, slategrey, white, slategrey);
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 600;
+        }
+    </style>
 </head>
-
 <body>
-  <!-- Background Title-->
-  <section>
-    <div class="title">MY PORTFOLIO</div>
-    <div class="subheading">MATTHEW AIDAN BELOIU</div>
-  </section>
-
-  <!--    About-->
-  <div id="aboutContainer">
-    <div class="aboutTitle">ABOUT</div>
-    <nav>
-      <a href=".aboutMeTitle">About Me</a>
-      |
-      <a href=".extraTitle">Extracurriculars</a>
-    </nav>
-  </div>
-  <div class="aboutMeContainer">
-    <h2 class="aboutMeTitle">About Me</h2>
-    <div class="aboutMeContent">
-      Hello There!
-      <br>
-      <br>
-      My name is Matthew Beloiu, I am in my third year of high school at
-      <a href="https://mts.ldcsb.ca">Mother Teresa Catholic Secondary School</a>
-      and I am looking to pursue a career in computer science,
-      including game design and cybersecurity.
-      <br>
-      <br>
-      In terms of coding and programming experience,
-      I am fluent in both Python and HTML/CSS web development.
-      <br>
-      <br>
-      I have been a part of the Army Cadets program since I was 11 years old. My current rank is that of a Warrant Officer (WO). I have attended two Remebrance Day parades and have been part of the flag party at my school's Remembrance Assembly. I have taught numerous lessons within the cadet program, the majority being on navigation and other similar topics.
-      <br>
-      <br>
-      In addition to my participation in the Cadet program, I have also volunteered as an assistant instructor at the Boler Mountain Ski School. Through this, I have had the opportunity to work with children and help teach them the basics of the sport.
-      <br>
-      <br>
-      <h4>Personal Details:</h4>
-      <ul class="information">
-        <b>Name:</b>
-        <div class="inf">Matthew Aidan Beloiu</div>
-        <br>
-        <b>Age:</b>
-        <div class="inf">16</div>
-        <br>
-        <b>Ethnic Background:</b>
-        <div class="inf">Canadian/Romanian</div>
-        <br>
-      </ul>
-      <h4>Education:</h4>
-      <ul class="information">
-        <b>Mother Teresa Catholic Secondary School (Sept 2020-Present):</b>
-        <div class="inf">I am a third-year student at Mother Teresa Catholic Secondary School (MTS). I have a high interest in Computer Science and Programming. I plan to pursue an undergradauate degree in post-secondary here in Canada.</div>
-        <br>
-        <b>Catholic Central Secondary School (Sept 2019-2020):</b>
-        <div class="inf">After attending this school for 1 year, completing Grade 9, I transferred to MTS.</div>
-        <br>
-      </ul>
-      <!-- <h4>Programming & Coding Skills:</h4>
-            <ul class="code">
-                <div class="inf">
-                    <li>Python</li>
-                </div>
-                <div class="inf">
-                    <li>HTML/CSS</li>
-                </div>
-            </ul>
-            <h4>Personal Extracurriculars:</h4>
+    <div class="titleContainer">
+        <div class="title">Personal Portfolio</div>
+        <hr>
+        <div class="subtitle">Matthew Beloiu</div>
+    </div>
+    <div class="infoContainer">
+        <div class="aboutMeContainer">
+            <div class="aboutMeTitle">About Me</div>
+            <div class="summary">
+                My name is Matthew Beloiu, I am in my fourth year of high school at
+                <a class="summaryLink" href="https://mts.ldcsb.ca">Mother Teresa Catholic Secondary School</a>
+                and I am looking to pursue a career in computer science,
+                including game design and cybersecurity. In terms of coding and programming experience,
+                I am fluent in both Python and HTML/CSS web development. I have been a part of the Army Cadets program since I was 11 years old. 
+                My current rank is that of a Warrant Officer (WO). I have attended two Remebrance Day parades and have been part of the flag party at my school's Remembrance Assembly. 
+                I have taught numerous lessons within the cadet program, the majority being on navigation and other similar topics.
+                In addition to my participation in the Cadet program, I have also volunteered as an assistant instructor at the Boler Mountain Ski School. 
+                Through this, I have had the opportunity to work with children and help teach them the basics of the sport.
+            </div>
+            <h4>Personal Details:</h4>
             <ul class="information">
-                <div class="inf">I have been a part of the Army Cadets program since I was 11 years old. My current rank is that of a Warrant Officer (WO). I have attended two Remebrance Day parades and have been part of the flag party at my school's Remembrance Assembly. I have taught numerous lessons within the cadet program, the majority being on navigation and other similar topics.
-                In addition to my participation in the Cadet program, I have also volunteered as an assistant instructor at the Boler Mountain Ski School. Through this, I have had the opportunity to work with children and help teach them the basics of the sport.</div>
-            </ul> -->
+                <b>Name:</b>
+                <div class="inf">Matthew Aidan Beloiu</div>
+                <br>
+                <b>Age:</b>
+                <div class="inf">17</div>
+                <br>
+                <b>Ethnic Background:</b>
+                <div class="inf">Canadian/Romanian</div>
+                <br>
+            </ul>
+            <h4>Education:</h4>
+            <ul class="information">
+                <b>Mother Teresa Catholic Secondary School (Sept 2020-Present):</b>
+                <div class="inf">I am a fourth-year student at Mother Teresa Catholic Secondary School (MTS). I have a high interest in Computer Science and Programming. I plan to pursue an undergradauate degree in post-secondary here in Canada.</div>
+                <br>
+            </ul>
+        </div>
+        <div class="projectContainer">
+            <div class="projectTitle">Projects</div>
+            <ul class="projectItems">
+                <li class="PItem">
+                    <i class="icon-game-controller">
+                    </i>
+                    <div class="pitemSubtitle">
+                        <a href="Personal-Project1.html" target="_blank">SUPERSPACE Original Game</a>
+                    </div>
+                </li>
+                <li class="PItem">
+                    <i class="icon-graduation"></i>
+                    <div class="pitemSubtitle">
+                        <a href="Personal-Project2.html" target="_blank">Freelancer Portfolio</a>
+                    </div>
+                </li>
+                <li class="PItem">
+                    <i class="icon-mustache"></i>
+                    <div class="pitemSubtitle">
+                        <a href="Personal-Project3.html" target="_blank">Stylish Portfolio</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+              <p class="Copyright_Text">Copyright © H3llion's Website 2023-Present</p>
+            </div>
+        </footer>
     </div>
-  </div>
-
-  <!--    Projects-->
-  <div class="Projects">
-    <div id="projectContainer">
-      <div class="projectsTitle">PROJECTS</div>
-    </div>
-    <div class="projectContents">
-      <ul class="projectItems">
-        <li class="PItem">
-          <i class="icon-game-controller"></i>
-          <h4>
-            <a href="Personal-Project1.html" target="_blank">SUPERSPACE Original Game</a>
-          </h4>
-        </li>
-        <li class="PItem">
-          <i class="icon-graduation"></i>
-          <h4>
-            <a href="Personal-Project2.html" target="_blank">Freelancer Portfolio</a>
-          </h4>
-        </li>
-        <li class="PItem">
-          <i class="icon-mustache"></i>
-          <h4>
-            <a href="Personal-Project3.html" target="_blank">Stylish Portfolio</a>
-          </h4>
-        </li>
-        <li class="PItem">
-          <i class="icon-list"></i>
-          <h4>More Coming Soon!</h4>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!--    Contact Me-->
-  <!-- <div class="contactmeTitle">CONTACT ME</div>
-    <br> -->
-
-  <!--    Contact Form-->
-  <!-- <div class="row justify-content-center"> -->
-  <!-- <div class="col-lg-8 col-x1-7"> -->
-  <!-- <form id="contactForm"> -->
-  <!--                   Name Input-->
-  <!-- <div class="name">
-                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sc-can-submit="no">
-                </div> -->
-  <!--                    Email-->
-  <!-- <div class="email">
-                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
-                </div> -->
-  <!--                    Phone Number-->
-  <!-- <div class="phone">
-                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no">
-                </div> -->
-  <!--                    Feedback Message-->
-  <!-- <div class="message">
-                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="width: 291px" data-sb-validations="required" data-sb-can-submit="no"></textarea>
-                </div> -->
-  <!--                    Submit Button-->
-  <!-- <div class="submitButton">
-                    <button class="Button" id="submitButton" type="submit">Send</button>
-                </div> -->
-  <!-- </form> -->
-  <!-- </div> -->
-  <!-- </div> -->
-
-  <!--    Footer-->
-  <footer class="footer">
-    <div class="footer-container">
-      <p class="Copyright_Text">Copyright © H3llion's Website 2023-Present</p>
-    </div>
-  </footer>
 </body>
 </html>
-
-
